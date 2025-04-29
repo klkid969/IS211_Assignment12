@@ -1,0 +1,20 @@
+<h1>Quiz Results for {{ student.first_name }} {{ student.last_name }}</h1>
+{% if results %}
+<table border="1">
+    <tr>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Score</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>{{ result.subject }}</td>
+        <td>{{ result.date }}</td>
+        <td>{{ result.score }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No results found for this student.</p>
+{% endif %}
+<a href="/dashboard">Back to Dashboard</a>

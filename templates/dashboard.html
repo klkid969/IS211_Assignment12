@@ -1,0 +1,21 @@
+<!-- Students Table -->
+<table>
+  {% for student in students %}  <!-- This loops through students -->
+  <tr>
+    <td>{{ student.id }}</td>
+    <td>{{ student.first_name }}</td>
+    <td>{{ student.last_name }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<!-- Quizzes Table -->
+<table>
+  {% for quiz in quizzes %}  <!-- This loops through quizzes -->
+  <tr>
+    <td>{{ quiz.id }}</td>
+    <td>{{ quiz.subject }}</td>
+    <td>{{ quiz.num_questions }}</td>
+  </tr>
+  {% endfor %}
+</table>

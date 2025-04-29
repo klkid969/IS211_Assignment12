@@ -1,0 +1,20 @@
+<h1>Add Quiz Result</h1>
+<form method="POST">
+    Student:
+    <select name="student_id" required>
+        {% for student in students %}
+        <option value="{{ student.id }}">{{ student.first_name }} {{ student.last_name }}</option>
+        {% endfor %}
+    </select><br>
+    
+    Quiz:
+    <select name="quiz_id" required>
+        {% for quiz in quizzes %}
+        <option value="{{ quiz.id }}">{{ quiz.subject }}</option>
+        {% endfor %}
+    </select><br>
+    
+    Score (0-100): <input type="number" name="score" min="0" max="100" required><br>
+    <button type="submit">Add Result</button>
+</form>
+<a href="/dashboard">Back to Dashboard</a>
